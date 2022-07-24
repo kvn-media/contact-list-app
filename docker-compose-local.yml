@@ -1,0 +1,14 @@
+version: '3'
+services:
+    contact-list-app:
+        build:
+            context: .
+            dockerfile: Dockerfile.dev
+        command: npm run start
+        container_name: contact-list
+        ports:
+            - '3000:3000'
+        volumes:
+            - ./:/contact-list-app
+            - /contact-list-app/node_modules
+

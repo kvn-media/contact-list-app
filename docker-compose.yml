@@ -1,0 +1,10 @@
+version: '3'
+services:
+    contact-list-app:
+        build: .
+        container_name: contact-list
+        ports:
+            - "80:80"
+        volumes:
+            - ./:/contact-list-app
+            - /contact-list-app/node_modules
