@@ -39,6 +39,12 @@ muhkevin2608/contact-list           latest    15ea3c9dced3   About an hour ago  
 # docker run container
 docker run -d -it -p 80:80/tcp --name react-app muhkevin2608/contact-list:latest
 
+CONTAINER ID   IMAGE                              COMMAND                  CREATED      STATUS                  PORTS     NAMES
+13f362352aa0   muhkevin2608/contact-list:latest   "/docker-entrypoint.…"   2 days ago   Exited (0) 2 days ago             react-app
+
+# docker start container
+docker start 13f362352aa0
+
 # to access site
 http://127.0.0.0:80
 
