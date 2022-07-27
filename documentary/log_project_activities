@@ -1,0 +1,70 @@
+Diary Log
+
+20-Juli-2022
+
+Challange from PT Subaga Inti Milenia
+
+Create Contact List App
+1. Can do addition contact and update contact list using React JS
+2. Containerize React app with Docker as Docker File
+
+
+Explanation of Contact List App with React Js
+Library npm that are use:
+Node sass, a library that provides binding for Node. js to LibSass, the C version of the popular stylesheet preprocessor, Sass. It allows us to natively compile SCSS files to CSS.
+
+Sass, (which stands for 'Syntactically awesome style sheets) is an extension of CSS that enables you to use things like variables, nested rules, inline imports and more. It also helps to keep things organised and allows you to create style sheets faster. Sass is compatible with all versions of CSS.
+
+CSS is a style language that is used to style and create web pages. While SCSS is a particular type of file for SASS, it used the Ruby language, which assembles the browser's CSS style sheets. SCSS contains advanced and modified features. SCSS is more expressive than the CSS.
+
+Eslint, is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs. In many ways, it is similar to JSLint and JSHint with a few exceptions: ESLint uses Espree for JavaScript parsing.
+ESLint is a file in a project repo called . eslintrc with a list of linting rules that runs through the project's JavaScript code and finds problematic patterns or code that don't adhere to certain style guidelines set forth by those rules. Then it alerts developers so they can fix it the errors.
+
+ESLint performs automated scans of your JavaScript files for common syntax and style errors. Prettier scans your files for style issues and automatically reformats your code to ensure consistent rules are being followed for indentation, spacing, semicolons, single quotes vs double quotes, etc.
+
+React dev tools, is a Chrome DevTools extension for the open-source React JavaScript library. It allows you to inspect the React component hierarchies in the Chrome Developer Tools.
+
+Redux dev tools, It is basically a console which you can set up in your development environment (Google Chrome) to visualize actions and state changes that take place in a redux application
+
+React JS, is a JavaScript library developed by Facebook which, among other things, was used to build Instagram.com. Its aim is to allow developers to easily create fast user interfaces for websites and applications alike. The main concept of React. js is virtual DOM.
+
+React Redux, is the official React binding for Redux. It allows React components to read data from a Redux Store, and dispatch Actions to the Store to update data. Redux helps apps to scale by providing a sensible way to manage state through a unidirectional data flow model.
+React Redux is kept up-to-date with any API changes from either library, to ensure that your React components behave as expected. Its intended usage adopts the design principles of React - writing declarative components.
+
+Prettier, enforces a consistent code style (i.e. code formatting that won't affect the AST) across your entire codebase because it disregards the original styling* by parsing it away and re-printing the parsed AST with its own rules that take the maximum line length into account, wrapping code when necessary.
+
+
+State Management in React JS
+The Four Kinds of React State to Manage
+Local state. Global state. Server state. URL state.
+
+Local state is perhaps the easiest kind of state to manage in React, considering there are so many tools built into the core React library for managing it. useState is the first tool you should reach for to manage state in your components. It can take accept any valid data value, including primitive and object values.
+
+A state is nothing but a structure that records any data changes in a react application. It can be used for storing values, form inputs, data from an API, etc. This local state-managed within a component can not be affected by other components.
+
+React's useState is the best option for local state management. If you need a global state solution, the most popular ones are Redux, MobX, and built-in Context API.
+
+
+23-Juli-2022
+
+/* Debug React App on Ubuntu Linux node sass can't start*/
+
+1. Rebuild dependencies node sass
+2. update libsass
+3. change npm config retry timeout
+4. set npm config registry to http://registry.npmjs.org
+5. docker compose using python to containerize react app
+
+Todo list:
+
+1. Need to solve code ERR_SOCKET_TIMEOUT, network invalid response body while trying to fetch. Socket timeout  (done)
+
+2. Need to solve can't build docker image do to node sass use node version 14.15.0 (done)
+
+3. Find node_modules node sass for linux (done)
+
+docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/create?name=react-app": dial unix /var/run/docker.sock: connect: permission denied.
+// Solution
+sudo chmod 666 /var/run/docker.sock
+
+

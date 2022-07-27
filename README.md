@@ -26,26 +26,26 @@ When encounter problem you can try:
 - try to upgrading node-sass version, npm install node-sass@latest
 
 
-# create and run container locally
+## Create and run container locally
 docker-compose -f docker-compose-local.yml up -d
 
-# docker build image
+## Docker build image
 docker build -t muhkevin/contact-list .
 
-# docker images
+## Docker images
 REPOSITORY                          TAG       IMAGE ID       CREATED             SIZE
 muhkevin2608/contact-list           latest    15ea3c9dced3   About an hour ago   143MB
 
-# docker run container
+## Docker run container
 docker run -d -it -p 80:80/tcp --name react-app muhkevin2608/contact-list:latest
 
 CONTAINER ID   IMAGE                              COMMAND                  CREATED      STATUS                  PORTS     NAMES
 13f362352aa0   muhkevin2608/contact-list:latest   "/docker-entrypoint.…"   2 days ago   Exited (0) 2 days ago             react-app
 
-# docker start container
+## Docker start container
 docker start 13f362352aa0
 
-# to access site
+## To access site
 http://127.0.0.0:80
 
 
